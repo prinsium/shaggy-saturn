@@ -1,0 +1,78 @@
+<ul class="flex flex-row justify-between items-center bg-transparent m-2 px-o md:px-2 lg:px-4">
+  <li class="flex flex-row text-neutral-700 font-semibold text-3xl">
+    Fastro
+  </li>
+
+  <li class="flex flex-row gap-4">
+    <div class="frame">
+      <a href="/">
+          <div class="button">contact</div>
+          <div class="button_bg-grad"></div>
+      </a>
+  </div>
+  </li>
+</ul>
+
+<style>
+  li{
+    font-family: "Chakra Petch", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  }
+
+  .frame {
+    position: relative;
+    display: block;
+}
+
+a {
+    z-index: 1;
+    transition: all .2s;
+    position: relative;
+    max-width: fit-content;
+    display: block;
+    margin: 0 auto;
+}
+
+a:hover {
+    text-decoration: none;
+    transform: translate(-5px,-5px);
+}
+
+.button {
+    display: block;
+    z-index: 0;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: #000;
+    text-align: center;
+    background-color: rgba(255,255,255,.3);
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all .2s;
+    position: relative;
+    transform: translate(0);
+    box-shadow: 1px 1px 1rem rgb(26 26 26 / 15%);
+}
+
+.button:hover {
+    text-decoration: none;
+    transform: translate(-5px,-5px);
+}
+
+.button_bg-grad {
+    z-index: -2;
+    background: linear-gradient(20deg, rgba(241,85,76,1) 0%, rgba(247,225,150,1) 100%);
+    background-position: 0 0;
+    background-size: cover;
+    border-radius: 4px;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    pointer-events: none;
+}
+</style>

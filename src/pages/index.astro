@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Homepage from "../components/Homepage.astro";
+import Marquee from "../components/Marquee.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="relative flex flex-col">
+	
+    <div class="flex flex-row justify-between pt-[10vh] items-center">
+      <div class="bgbl rounded-full"></div>
+	    <div class="bgbr rounded-full"></div>
+    </div>
+  
+
+    <div class="hero absolute">
+      <Homepage />
+    </div>
+
+    </div>
+  </main>
+</Layout>
+
+<style>
+
+  .bgbl{
+	width: 30vw;
+	height: 30vw;
+	background-color: #fa8989;
+  }
+
+  .bgbr{
+	width: 30vw;
+	height: 30vw;
+	background-color: #89fae5;
+  }
+
+  .hero{
+	backdrop-filter: blur(60px);
+	position: absolute;
+	z-index: 2;
+  }
+
+</style>

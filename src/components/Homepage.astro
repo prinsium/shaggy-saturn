@@ -1,0 +1,92 @@
+---
+import Marquee from "./Marquee.astro";
+---
+
+<div class="flex flex-col h-[90vh] justify-around items-center">
+  <div class="text-center">
+    <h1 class="flex flex-wrap items-center justify-center whitespace-nowrap text-center text-wrap content-baseline">Build your
+      <span class="hidden md:block px-6 mt-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="border-2 md:border-4 border-dashed border-black rounded-2xl md:rounded-3xl w-[3rem] h-[2rem] md:w-[8vw] md:h-[4vw]">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+        </svg>        
+      </span>
+       <span>digital</span>
+      brand with Fastro</h1>
+  </div>
+  
+
+  <div>
+    <a href="https://stacksorted.com/buttons/gumroad" target="_blank">
+      <button class="btn" id="btn1"> Get Started</button>
+      <button class="btn" id="btn2"></button></a
+    >
+  </div>
+
+  <div class="w-screen">
+    <Marquee />
+  </div>
+</div>
+
+<style>
+  h1 {
+    font-family: "Chakra Petch", sans-serif;
+    font-style: normal;
+    font-size: 8vw;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    z-index: 1;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Chakra Petch", sans-serif;
+    font-style: normal;
+  }
+
+  a > .btn {
+    transform: translateX(0%) translateY(0%);
+    transition: 0.3s ease-in-out;
+  }
+
+  a:hover > #btn1 {
+    transform: translateX(-5%) translateY(-24%);
+    transition: 0.3s ease-in-out;
+  }
+
+  a:hover > #btn2 {
+    transform: translateX(-2%) translateY(-12%);
+    transition: 0.3s ease-in-out;
+  }
+
+  .btn {
+    position: absolute;
+    width: 288px;
+    height: 70px;
+    color: white;
+    font-size: 1.5rem;
+    border: solid 2px black;
+    border-radius: 4px;
+  }
+
+  #btn1 {
+    background: black;
+    z-index: 2;
+  }
+  #btn2 {
+    background: yellow;
+    z-index: 1;
+  }
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 3rem;
+    }
+    .btn {
+      width: 200px;
+      height: 50px;
+    }
+    }
+</style>
